@@ -19,6 +19,16 @@ public class TaskPriority implements Serializable {
     @Column(name = "priority_name", length = 100)
     private String priorityName;
 
+    public TaskPriority() {
+        this.priority = 0;
+        this.priorityName = "";
+    }
+    
+    public TaskPriority(int priority, String priorityName) {
+        this.priority = priority;
+        this.priorityName = priorityName;
+    }
+
     public int getPriority() {
         return priority;
     }
